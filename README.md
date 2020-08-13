@@ -1,2 +1,2 @@
 # d3-gauge
-Gauge visualization making use of d3.js
+Response gauge visualization making use of d3.js
