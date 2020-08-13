@@ -66,12 +66,12 @@ function createVisualization(container, props) {
 		.attr('width', width)
 		.attr('height', height);
 
-	let arcGroup = svg.selectAll('g').data([null]);
+	let arcGroup = svg.selectAll('.arc-group').data([null]);
 	arcGroup.exit().remove();
 	arcGroup = arcGroup
 		.enter()
 		.append('g')
-		.attr('class', 'arcs-group')
+		.attr('class', 'arc-group')
 		.merge(arcGroup)
 		.attr('transform', translation(width / 2, height / 2));
 
@@ -109,7 +109,6 @@ function createVisualization(container, props) {
 		.attr('class', 'data-text')
 		.text(0)
 		.merge(dataText)
-		.attr('dy', -5)
 		.style('text-anchor', 'middle')
 		.style('font-family', 'sans-serif')
 		.style('font-size', fontSize)
